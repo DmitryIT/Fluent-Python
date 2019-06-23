@@ -4,7 +4,7 @@ def decorator(func):
     return inner
 
 #decorator(target())
-#@decorator
+@decorator
 def target():
     print('runing target()')
 
