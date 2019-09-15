@@ -1,8 +1,6 @@
 import time
 import sys
-from concurrent import futures
 
-MAX_WORKERS = 10
 instances = [i for i in range(10)]
 
 def show(text):
@@ -15,9 +13,8 @@ def do_something(instance):
     return instance
 
 def do_many(instances):
-    workers = min(len(instances), MAX_WORKERS)
-    with futures.ThreadPoolExecutor(workers) as executor:
-        res = executor.map(do_something, sorted(instances))
+    for i in sorted(instances):
+        do_something(i)
 
 def main():
     do_many(instances)
