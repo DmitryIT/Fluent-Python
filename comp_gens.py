@@ -5,7 +5,7 @@ def decorator(func):
 
 #decorator(target())
 @decorator
-def target()∏
+def target():
     print('runing target()')
 
 target()
