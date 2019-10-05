@@ -1,11 +1,14 @@
 def decorator(func):
     def inner():
-        print('running inner()')
+        print("running inner()")
+
     return inner
 
-#decorator(target())
+
+# decorator(target())
 @decorator
 def target():
-    print('runing target()')
+    print("runing target()")
+
 
 target()
