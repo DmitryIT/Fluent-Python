@@ -6,7 +6,7 @@ from time import sleep
 """
 Monitor an input file and throw a message if it
 is older then MAX_DELTA
-Syntax: python file_monitor.py <path to file>  
+Syntax: python file_monitor.py <path to file> 
 """
 
 MAX_DELTA = timedelta(minutes=1)
